@@ -10,7 +10,7 @@ Set @lookupsubscriberlanguage = LookupRows('Customers', 'Customer ID', @customer
 IF rowcount(@lookupsubscriberlanguage) > 0 Then
 var @CustomerIDrow, @languagefield
 Set @CustomerIDrow = Row(@lookupsubscriberlanguage,1)
-Set @languagefield = Field(@CustomerIDrow)
+Set @languagefield = Field(@CustomerIDrow, "Preference Language Communication")
 
 ELSE 
 
